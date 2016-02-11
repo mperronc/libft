@@ -6,12 +6,11 @@
 /*   By: mperronc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 14:46:01 by mperronc          #+#    #+#             */
-/*   Updated: 2015/12/02 16:59:54 by mperronc         ###   ########.fr       */
+/*   Updated: 2016/02/11 17:44:15 by mperronc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#include "includes/libft.h"
 
 static size_t	get_tab_len(char const *s, char c)
 {

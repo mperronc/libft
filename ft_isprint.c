@@ -6,9 +6,11 @@
 /*   By: mperronc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 13:46:22 by mperronc          #+#    #+#             */
-/*   Updated: 2015/11/23 14:21:43 by mperronc         ###   ########.fr       */
+/*   Updated: 2016/02/11 17:44:13 by mperronc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "includes/libft.h"
 
 int		ft_isprint(int c)
 {

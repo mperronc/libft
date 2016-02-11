@@ -6,11 +6,11 @@
 /*   By: mperronc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 10:28:56 by mperronc          #+#    #+#             */
-/*   Updated: 2015/11/25 16:58:28 by mperronc         ###   ########.fr       */
+/*   Updated: 2016/02/11 17:37:52 by mperronc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 int		ft_atoi(const char *str)
 {

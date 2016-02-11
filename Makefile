@@ -6,7 +6,7 @@
 #    By: mperronc <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/02 12:07:00 by mperronc          #+#    #+#              #
-#    Updated: 2015/12/02 14:20:24 by mperronc         ###   ########.fr        #
+#    Updated: 2016/02/11 17:31:36 by mperronc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,7 +80,7 @@ SRC_NAME = ft_memset.c		\
 
 OBJ_PATH = ./obj/
 
-INC_PATH = ./
+INC_PATH = ./includes/
 
 NAME = libft.a
 

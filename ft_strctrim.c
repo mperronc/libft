@@ -6,12 +6,11 @@
 /*   By: mperronc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 14:42:11 by mperronc          #+#    #+#             */
-/*   Updated: 2015/12/02 16:22:57 by mperronc         ###   ########.fr       */
+/*   Updated: 2016/02/11 17:44:14 by mperronc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
+#include "includes/libft.h"
 
 char	*ft_strctrim(char const *s, char c)
 {
