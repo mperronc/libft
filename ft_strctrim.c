@@ -6,7 +6,7 @@
 /*   By: mperronc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 14:42:11 by mperronc          #+#    #+#             */
-/*   Updated: 2016/02/11 17:44:14 by mperronc         ###   ########.fr       */
+/*   Updated: 2016/02/12 17:22:02 by mperronc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,25 @@
 
 char	*ft_strctrim(char const *s, char c)
 {
-	char	*fs;
-	char	*res;
+	unsigned int		start;
+	int					end;
+	char				*res;
 
-	fs = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (fs == NULL)
+	start = 0;
+	while (s[start] == c)
+		start++;
+	if (start == ft_strlen(s))
+	{
+		res = ft_strnew(1);
+		return (res);
+	}
+	end = ft_strlen(s) - 1;
+	while (s[end] == c)
+		end--;
+	end++;
+	res = ft_strsub(s, start, end - start);
+	if (res == NULL)
 		return (NULL);
-	while (*s == c)
-		s++;
-	fs = ft_strcpy(fs, s);
-	res = fs;
-	while (*(fs + 1) != 0)
-		fs++;
-	while (*fs == c)
-		fs--;
-	*(fs + 1) = 0;
+	res[end - start] = 0;
 	return (res);
 }

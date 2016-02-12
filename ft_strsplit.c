@@ -6,7 +6,7 @@
 /*   By: mperronc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 14:46:01 by mperronc          #+#    #+#             */
-/*   Updated: 2016/02/11 17:44:15 by mperronc         ###   ########.fr       */
+/*   Updated: 2016/02/12 17:21:29 by mperronc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,8 @@ char			**ft_strsplit(char const *s, char c)
 	int		y;
 
 	fs = ft_strctrim(s, c);
-	tab = (char **)malloc(sizeof(char *) * get_tab_len(s, c));
+	if (!(tab = (char **)malloc(sizeof(char *) * get_tab_len(s, c))))
+		return (NULL);
 	y = 0;
 	x = 0;
 	while (*fs)
@@ -69,8 +70,7 @@ char			**ft_strsplit(char const *s, char c)
 		}
 		if (x == 0)
 			tab[y] = ft_strnew(get_str_len(fs, c));
-		tab[y][x++] = *fs;
-		fs++;
+		tab[y][x++] = *fs++;
 	}
 	tab[++y] = 0;
 	return (tab);

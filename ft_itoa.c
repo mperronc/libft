@@ -6,7 +6,7 @@
 /*   By: mperronc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 15:00:44 by mperronc          #+#    #+#             */
-/*   Updated: 2016/02/11 17:44:14 by mperronc         ###   ########.fr       */
+/*   Updated: 2016/02/12 17:15:47 by mperronc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,13 @@ char		*ft_itoa(int n)
 	int		sign;
 	char	*s;
 
-	if (n == -2147483648)
-		return ("-2147483648");
-	s = (char *)malloc(sizeof(char) * (ft_intlen(n) + 2));
-	if (s == NULL)
+	if ((s = ft_strnew(ft_intlen(n))) == NULL)
 		return (NULL);
-	sign = n;
+	if (n == -2147483648)
+		return ((s = ft_strcpy(s, "-2147483648\0")));
 	if (n == 0)
-		return ("0");
+		return ((s = ft_strcpy(s, "0\0")));
+	sign = n;
 	if (n < 0)
 		n = -n;
 	i = 0;
